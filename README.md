@@ -1,19 +1,4 @@
 # Salah Eddine El-Azhary — Portfolio + Admin CMS
-
-Dark, responsive portfolio inspired by [iabhinav.me](https://iabhinav.me/), with a Postgres-backed admin dashboard to manage all content.
-
-### Open on your phone (same Wi‑Fi)
-
-`172.20.112.1` is a WSL/virtual adapter — phones cannot use it.
-
-1. Run `npm run dev` (binds to `0.0.0.0`).
-2. On your PC, check your **Wi‑Fi** IPv4 (example: `192.168.3.57`).
-3. Put that IP in `.env` as `ALLOWED_DEV_ORIGINS=192.168.3.57` (required so tabs/buttons work on phone).
-4. Restart `npm run dev`, then on your phone open: `http://YOUR_WIFI_IP:3000`
-5. If it still fails, allow Node.js / port **3000** in Windows Firewall when prompted (Private networks).
-
-Phone and PC must be on the same Wi‑Fi (not guest/VPN).
-
 ## Stack
 
 - Next.js (App Router) + TypeScript + Tailwind
