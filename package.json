@@ -15,9 +15,10 @@
     "db:export-seed": "tsx scripts/export-seed-from-db.ts",
     "db:setup": "prisma db push && tsx prisma/seed.ts",
     "postinstall": "prisma generate",
-    "prod:up": "docker compose -f docker-compose.prod.yml up -d --build",
-    "prod:down": "docker compose -f docker-compose.prod.yml down",
-    "prod:logs": "docker compose -f docker-compose.prod.yml logs -f app"
+    "prod:up": "docker compose --env-file .env.production -f docker-compose.prod.yml up -d --build",
+    "prod:down": "docker compose --env-file .env.production -f docker-compose.prod.yml down",
+    "prod:logs": "docker compose --env-file .env.production -f docker-compose.prod.yml logs -f app",
+    "prod:seed": "docker compose --env-file .env.production -f docker-compose.prod.yml exec app npx tsx prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.16.1",
