@@ -99,8 +99,23 @@ Visit:
 
 ## 7. Seed content (first deploy only)
 
+This loads your exported local content (profile, case studies, etc.):
+
 ```bash
 docker compose -f docker-compose.prod.yml exec app npx tsx prisma/seed.ts
+```
+
+Also copy your local uploaded images/resume to the server volume (if you used Admin uploads):
+
+```bash
+# From your PC (example)
+scp -r public/uploads/* root@YOUR_VPS_IP:/var/www/portfolio/public/uploads/
+```
+
+Or after containers are up, copy into the running volume:
+
+```bash
+docker cp ./public/uploads/. portfolio-app:/app/public/uploads/
 ```
 
 ## 8. Updates later

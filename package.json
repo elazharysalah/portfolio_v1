@@ -12,6 +12,7 @@
     "db:down": "docker compose down",
     "db:push": "prisma db push",
     "db:seed": "tsx prisma/seed.ts",
+    "db:export-seed": "tsx scripts/export-seed-from-db.ts",
     "db:setup": "prisma db push && tsx prisma/seed.ts",
     "postinstall": "prisma generate",
     "prod:up": "docker compose -f docker-compose.prod.yml up -d --build",
