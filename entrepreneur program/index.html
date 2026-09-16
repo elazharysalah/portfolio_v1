@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>USA Entrepreneur Programs — International Founders Guide</title>
+  <meta name="description" content="50+ USA-based entrepreneur accelerators, residencies, and fellowships that accept candidates from outside the US and Europe — including Morocco and Africa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0f1c1a;
+      --ink-soft: #2a3d39;
+      --paper: #e8f0ed;
+      --paper-2: #d4e4df;
+      --card: #f4faf7;
+      --line: #b8cec6;
+      --accent: #0d7a5f;
+      --accent-2: #c45c26;
+      --warn: #9a3412;
+      --ok: #047857;
+      --muted: #5a706a;
+      --shadow: 0 12px 40px rgba(15, 28, 26, 0.08);
+      --radius: 14px;
+      --font: "Instrument Sans", system-ui, sans-serif;
+      --display: "Newsreader", Georgia, serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, #c5e8dc 0%, transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 0%, #f0d9c8 0%, transparent 45%),
+        linear-gradient(180deg, #eef5f2 0%, var(--paper) 40%, #dfece7 100%);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    a { color: var(--accent); }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    header.hero {
+      padding: 2.5rem 0 1.75rem;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 1.5rem;
+      animation: rise 0.7s ease both;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    .kicker {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-family: var(--display);
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      max-width: 16ch;
+      margin-bottom: 0.85rem;
+    }
+
+    .lede {
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      max-width: 52ch;
+      margin-bottom: 1.25rem;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .stat strong {
+      display: block;
+      font-family: var(--display);
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .stat span {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(232, 240, 237, 0.92);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
+      animation: rise 0.7s ease 0.1s both;
+    }
+
+    .filters {
+      display: grid;
+      grid-template-columns: 1.4fr repeat(4, 1fr);
+      gap: 0.65rem;
+    }
+
+    @media (max-width: 900px) {
+      .filters { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      .filters { grid-template-columns: 1fr; }
+    }
+
+    label.field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    input, select {
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: 0;
+      color: var(--ink);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.55rem 0.7rem;
+      width: 100%;
+    }
+
+    input:focus, select:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-top: 0.85rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--ink-soft);
+      font: inherit;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .chip:hover, .chip.active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: #fff;
+    }
+
+    .note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      padding: 0.75rem 1rem;
+      border-left: 3px solid var(--accent-2);
+      background: rgba(196, 92, 38, 0.08);
+      border-radius: 0 10px 10px 0;
+    }
+
+    section.timeline { margin-bottom: 2.5rem; animation: rise 0.6s ease both; }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .section-head h2 {
+      font-family: var(--display);
+      font-size: 1.45rem;
+      font-weight: 600;
+    }
+
+    .section-head .count {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    article.card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.15rem 1.2rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
+      cursor: pointer;
+    }
+
+    article.card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+      border-color: var(--accent);
+    }
+
+    article.card:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.5rem;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .badge.open { background: #d1fae5; color: var(--ok); }
+    .badge.rolling { background: #cffafe; color: #0e7490; }
+    .badge.soon { background: #ffedd5; color: var(--warn); }
+    .badge.seasonal { background: #e0e7ff; color: #3730a3; }
+    .badge.closed { background: #f3f4f6; color: #6b7280; }
+
+    .tag-intl {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--accent-2);
+      background: rgba(196, 92, 38, 0.12);
+      padding: 0.25rem 0.45rem;
+      border-radius: 6px;
+    }
+
+    h3 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .loc {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .deadline {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .deadline em {
+      font-style: normal;
+      color: var(--accent-2);
+    }
+
+    .blurb {
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      flex: 1;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      background: var(--paper-2);
+      padding: 0.2rem 0.45rem;
+      border-radius: 5px;
+    }
+
+    .card-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.25rem;
+      padding-top: 0.65rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.8rem;
+    }
+
+    .card-foot a {
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .card-foot a:hover { text-decoration: underline; }
+
+    .empty {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+    }
+
+    /* Modal */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 28, 26, 0.55);
+      z-index: 100;
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .overlay.show { display: flex; animation: fade 0.2s ease; }
+
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal {
+      background: var(--card);
+      border-radius: 18px 18px 12px 12px;
+      max-width: 640px;
+      width: 100%;
+      max-height: 90vh;
+      overflow: auto;
+      padding: 1.5rem 1.4rem 1.75rem;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.25);
+      animation: slideUp 0.28s ease;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(24px); opacity: 0; }
+      to { transform: none; opacity: 1; }
+    }
+
+    @media (min-width: 640px) {
+      .overlay { align-items: center; }
+      .modal { border-radius: 18px; }
+    }
+
+    .modal-close {
+      float: right;
+      border: none;
+      background: var(--paper-2);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 1.25rem;
+      cursor: pointer;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .modal h2 {
+      font-family: var(--display);
+      font-size: 1.65rem;
+      margin: 0.5rem 0 0.35rem;
+      clear: both;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin: 1.1rem 0;
+    }
+
+    @media (max-width: 480px) {
+      .detail-grid { grid-template-columns: 1fr; }
+    }
+
+    .detail {
+      background: var(--paper);
+      border-radius: 10px;
+      padding: 0.7rem 0.8rem;
+    }
+
+    .detail dt {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .detail dd { font-size: 0.9rem; font-weight: 600; }
+
+    .modal p { margin: 0.75rem 0; font-size: 0.95rem; color: var(--ink-soft); }
+
+    .modal .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1rem;
+      background: var(--ink);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.75rem 1.15rem;
+      border-radius: 10px;
+      transition: background 0.2s;
+    }
+
+    .modal .cta:hover { background: var(--accent); }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <span class="kicker">USA · International founders welcome</span>
+      <h1>Entrepreneur programs open beyond the US &amp; Europe</h1>
+      <p class="lede">
+        Curated accelerators, residencies, and fellowships based in the United States that accept candidates from Morocco, Africa, MENA, and other regions — modeled after programs like
+        <a href="https://www.join-thebridge.com/" target="_blank" rel="noopener">The Bridge</a>.
+      </p>
+      <div class="stats">
+        <div class="stat"><strong id="stat-total">50+</strong><span>programs listed</span></div>
+        <div class="stat"><strong id="stat-open">—</strong><span>open / rolling now</span></div>
+        <div class="stat"><strong>MA+</strong><span>Morocco-eligible flagged</span></div>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <div class="filters">
+        <label class="field">Search
+          <input type="search" id="q" placeholder="Name, city, AI, MENA…" autocomplete="off" />
+        </label>
+        <label class="field">Apply timing
+          <select id="timing">
+            <option value="all">All timings</option>
+            <option value="open">Open now</option>
+            <option value="rolling">Rolling</option>
+            <option value="soon">Deadline soon</option>
+            <option value="seasonal">Seasonal / multi-batch</option>
+            <option value="upcoming">Opens later</option>
+          </select>
+        </label>
+        <label class="field">Stage
+          <select id="stage">
+            <option value="all">Any stage</option>
+            <option value="pre-idea">Pre-idea / talent</option>
+            <option value="pre-seed">Pre-seed</option>
+            <option value="seed">Seed</option>
+            <option value="growth">Growth / soft-landing</option>
+          </select>
+        </label>
+        <label class="field">Focus
+          <select id="focus">
+            <option value="all">All focuses</option>
+            <option value="general">General / multi</option>
+            <option value="ai">AI / deep tech</option>
+            <option value="climate">Climate / impact</option>
+            <option value="bio">Bio / health</option>
+            <option value="enterprise">Enterprise / B2B</option>
+            <option value="mena">MENA / Africa track</option>
+          </select>
+        </label>
+        <label class="field">Intl. fit
+          <select id="intl">
+            <option value="all">All programs</option>
+            <option value="morocco">Strong Morocco / Africa / MENA fit</option>
+            <option value="global">Explicitly global</option>
+          </select>
+        </label>
+      </div>
+      <div class="meta-row">
+        <div class="chips" id="sort-chips">
+          <button type="button" class="chip active" data-sort="timing">Sort: apply timing</button>
+          <button type="button" class="chip" data-sort="name">Sort: A–Z</button>
+          <button type="button" class="chip" data-sort="location">Sort: location</button>
+        </div>
+        <span id="result-count">Showing all</span>
+      </div>
+    </div>
+
+    <p class="note">
+      Deadlines and terms change often — always verify on the official site before applying. Visa sponsorship is rare; most programs expect you to secure a B-1/B-2, ESTA (if eligible), or O-1/E-2 with counsel after acceptance. “Morocco fit” means the program publicly welcomes non-US / non-EU founders or has an Africa/MENA track.
+    </p>
+
+    <div id="app"></div>
+
+    <footer>
+      Built as a research directory for international founders targeting USA programs (Sep 2026 snapshot). Not affiliated with listed organizations. Example inspiration:
+      <a href="https://www.join-thebridge.com/" target="_blank" rel="noopener">join-thebridge.com</a>.
+    </footer>
+  </div>
+
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal" id="modal"></div>
+  </div>
+
+  <script>
+    /** @typedef {'open'|'rolling'|'soon'|'seasonal'|'upcoming'|'closed'} Timing */
+
+    /**
+     * USA-based programs that accept (or strongly support) founders from outside US/Europe.
+     * sortKey: lower = apply sooner / more urgent
+     */
+    const PROGRAMS = [
+      {
+        id: "bridge",
+        name: "The Bridge (Entrepreneur First)",
+        location: "San Francisco, CA",
+        timing: "seasonal",
+        timingLabel: "Seasonal cohorts",
+        applyBy: "Check current cohort window",
+        sortKey: 40,
+        stage: "pre-idea",
+        focus: ["general", "ai", "mena"],
+        intl: ["morocco", "global"],
+        deal: "Residency; EF network; AI credits; advisors",
+        duration: "~residency in SF",
+        equity: "EF terms (talent investor)",
+        morocco: true,
+        url: "https://www.join-thebridge.com/",
+        blurb: "SF residency for non-US founders at pre-idea / pre-team stage — the reference model for this list. Backed via Entrepreneur First.",
+        details: "Designed for founders outside the US who want to start in Silicon Valley early. Hardware lab, advisors, fireside chats. Morocco and other African/MENA founders are in scope as non-US talent."
+      },
+      {
+        id: "kernel",
+        name: "Kernel Camp (Propeller)",
+        location: "San Francisco, CA",
+        timing: "open",
+        timingLabel: "Open — Apr–May 2026 cohort",
+        applyBy: "Apply now for Apr–May 2026",
+        sortKey: 5,
+        stage: "pre-seed",
+        focus: ["ai", "mena"],
+        intl: ["morocco", "global"],
+        deal: "Fully sponsored housing + residency",
+        duration: "8 weeks",
+        equity: "No standard accelerator fee (VC residency)",
+        morocco: true,
+        url: "https://propellerinc.me/kernel-camp-founders",
+        blurb: "8-week deep-tech / AI infrastructure residency for MENA founders (Morocco included) in San Francisco.",
+        details: "Propeller-sponsored housing, workshops, mentor office hours, company visits, demo day. Need US visa for 8 weeks; full-time MENA-based founders building demo-ready products."
+      },
+      {
+        id: "viaka",
+        name: "Viaka Global Access: North America",
+        location: "USA (GTM readiness)",
+        timing: "soon",
+        timingLabel: "Deadline soon",
+        applyBy: "Feb 18, 2026",
+        sortKey: 8,
+        stage: "growth",
+        focus: ["mena", "general"],
+        intl: ["morocco", "global"],
+        deal: "Program fee ~$20,000",
+        duration: "12 weeks (Mar–Jun 2026)",
+        equity: "Fee-based (verify)",
+        morocco: true,
+        url: "https://www.viaka.net/globalaccess-na",
+        blurb: "US readiness program for revenue MENA founders ($200K+ ARR) — Morocco eligible.",
+        details: "Workshops on sales, fundraising, immigration storytelling, warm intros, optional MENA Rising NYC pitch. Built for MENA diaspora scaling into North America."
+      },
+      {
+        id: "baf",
+        name: "Builders of Africa’s Future (ADN)",
+        location: "Silicon Valley exposure (ADN)",
+        timing: "upcoming",
+        timingLabel: "Opens Feb 23, 2026",
+        applyBy: "Mar 31, 2026",
+        sortKey: 25,
+        stage: "pre-seed",
+        focus: ["climate", "mena", "general"],
+        intl: ["morocco", "global"],
+        deal: "Training, mentorship, SV visibility",
+        duration: "Annual accelerator cycle",
+        equity: "Typically non-dilutive recognition program",
+        morocco: true,
+        url: "https://africandiaspora.smapply.io/prog/BAF26/",
+        blurb: "African Diaspora Network program for early-stage African enterprises — Morocco is eligible.",
+        details: "Focus on health, education, energy, agriculture, fintech, gender inclusion, etc. Mentorship + Silicon Valley platform. Geographic diversity across Africa encouraged."
+      },
+      {
+        id: "svf-stanford",
+        name: "Stanford Venture Fellowship (SVF)",
+        location: "Silicon Valley, CA",
+        timing: "seasonal",
+        timingLabel: "May 29 – Jun 3, 2026",
+        applyBy: "Check fellowship site",
+        sortKey: 35,
+        stage: "pre-idea",
+        focus: ["general", "ai"],
+        intl: ["morocco", "global"],
+        deal: "Fully funded week + travel reimbursement",
+        duration: "1 week",
+        equity: "None",
+        morocco: true,
+        url: "https://www.svfellow.com/",
+        blurb: "Fully funded one-week Silicon Valley immersion for exceptional people worldwide (16+).",
+        details: "Small cohort (~10). Sessions with founders/investors. Open from anywhere — strong fit for Moroccan students and early founders exploring SV."
+      },
+      {
+        id: "sv-fellowship",
+        name: "Silicon Valley Fellowship (Gomry)",
+        location: "San Francisco Bay Area, CA",
+        timing: "upcoming",
+        timingLabel: "Next batch Nov 11–15, 2026",
+        applyBy: "Before Nov 2026 batch",
+        sortKey: 55,
+        stage: "pre-idea",
+        focus: ["general"],
+        intl: ["morocco", "global"],
+        deal: "Need-based travel support after admission",
+        duration: "1 week",
+        equity: "Program fee / fellowship model (verify)",
+        morocco: true,
+        url: "https://www.siliconvalleyfellowship.com/",
+        blurb: "One-week SF immersion with Big Tech mentors — open internationally.",
+        details: "Workshops, company visits, alumni network. Visa Waiver countries use ESTA; others apply via embassy. High application volume."
+      },
+      {
+        id: "nisa",
+        name: "NISA Soft Landing Accelerator",
+        location: "Northern Virginia / Manassas, VA",
+        timing: "upcoming",
+        timingLabel: "Next cohort late summer 2026",
+        applyBy: "Expected late summer 2026",
+        sortKey: 50,
+        stage: "growth",
+        focus: ["bio", "ai"],
+        intl: ["morocco", "global"],
+        deal: "Mentorship + US soft-landing support",
+        duration: "Multi-month cohort",
+        equity: "Verify with Naugen / Mason",
+        morocco: true,
+        url: "https://ibi.gmu.edu/nisa/",
+        blurb: "International soft-landing into the US for life sciences & deep tech — open to global startups.",
+        details: "Partnership of Naugen + George Mason. Spring 2026 closed; watch for next window. Strong for biotech, medtech, AI, quantum, semiconductors, aerospace."
+      },
+      {
+        id: "ia-austin",
+        name: "International Accelerator",
+        location: "Austin, TX",
+        timing: "rolling",
+        timingLabel: "Rolling applications",
+        applyBy: "Rolling",
+        sortKey: 15,
+        stage: "seed",
+        focus: ["general"],
+        intl: ["morocco", "global"],
+        deal: "6-month US market program",
+        duration: "6 months",
+        equity: "Investment terms via IA (verify)",
+        morocco: true,
+        url: "https://www.internationalaccelerator.com/our-program",
+        blurb: "Built for foreign-born founders relocating to Austin for the program.",
+        details: "Requires at least one foreign-born founder committed to move to Austin. Due diligence + local counsel intro after acceptance. Explicit Morocco/global fit."
+      },
+      {
+        id: "yc",
+        name: "Y Combinator",
+        location: "San Francisco, CA",
+        timing: "seasonal",
+        timingLabel: "4 batches / year",
+        applyBy: "Batch deadlines on ycombinator.com",
+        sortKey: 30,
+        stage: "pre-seed",
+        focus: ["general", "ai"],
+        intl: ["morocco", "global"],
+        deal: "$500K ($125K for 7% + $375K uncapped MFN)",
+        duration: "3 months",
+        equity: "~7% + MFN SAFE",
+        morocco: true,
+        url: "https://www.ycombinator.com/apply",
+        blurb: "Open to any startup anywhere. Helps with visas & incorporation after acceptance.",
+        details: "No need to incorporate before applying. Parent company usually US/Canada/Singapore/Cayman. Immigration attorneys introduced post-acceptance. Morocco founders regularly accepted."
+      },
+      {
+        id: "techstars",
+        name: "Techstars (US programs)",
+        location: "NYC, LA, Boston, Seattle, Detroit + more",
+        timing: "seasonal",
+        timingLabel: "Multiple city deadlines",
+        applyBy: "Per accelerator page",
+        sortKey: 32,
+        stage: "pre-seed",
+        focus: ["general"],
+        intl: ["morocco", "global"],
+        deal: "~$220K ($20K equity + $200K MFN SAFE)",
+        duration: "3 months",
+        equity: "~5% common + SAFE",
+        morocco: true,
+        url: "https://www.techstars.com/accelerators",
+        blurb: "Global founder network; many US city & vertical programs accept international teams.",
+        details: "Small cohorts (~10–12). Mentor matching. Techstars Anywhere is remote-friendly. Plan visas for in-person cities."
+      },
+      {
+        id: "500flagship",
+        name: "500 Global Flagship",
+        location: "Palo Alto / Silicon Valley, CA",
+        timing: "seasonal",
+        timingLabel: "Periodic Flagship batches",
+        applyBy: "Check 500.co/founders/flagship",
+        sortKey: 38,
+        stage: "seed",
+        focus: ["general"],
+        intl: ["morocco", "global"],
+        deal: "$150K for 6%",
+        duration: "4 months in-person",
+        equity: "6%",
+        morocco: true,
+        url: "https://500.co/founders/flagship",
+        blurb: "Classic SV accelerator with a highly international alumni base.",
+        details: "Curriculum, mentors, demo day, global 500 network. Strong track record with founders from emerging markets."
+      },
+      {
+        id: "ef",
+        name: "Entrepreneur First (US / Bridge path)",
+        location: "San Francisco (via The Bridge / EF)",
+        timing: "seasonal",
+        timingLabel: "Talent investor cohorts",
+        applyBy: "EF / Bridge application",
+        sortKey: 41,
+        stage: "pre-idea",
+        focus: ["ai", "general"],
+        intl: ["morocco", "global"],
+        deal: "Salary + equity in formed company",
+        duration: "Multi-month talent → company",
+        equity: "EF founding equity model",
+        morocco: true,
+        url: "https://www.joinef.com/",
+        blurb: "Apply as an individual — no idea or co-founder required. Global talent focus.",
+        details: "Pairs exceptional people to form startups. The Bridge is the SF residency expression for non-US founders."
+      },
+      {
+        id: "alchemist",
+        name: "Alchemist Accelerator",
+        location: "San Francisco, CA (remote-friendly)",
+        timing: "seasonal",
+        timingLabel: "Enterprise cohorts",
+        applyBy: "alchemistaccelerator.com",
+        sortKey: 42,
+        stage: "seed",
+        focus: ["enterprise", "ai"],
+        intl: ["global"],
+        deal: "~$30K net typical; ~5% flexible",
+        duration: "6 months",
+        equity: "~5% (flexible)",
+        morocco: false,
+        url: "https://www.alchemistaccelerator.com/",
+        blurb: "Enterprise / B2B / deep-tech focus; founders can participate from anywhere.",
+        details: "Timezone-friendly programming. Strong for selling to large organizations. Global founders welcome."
+      },
+      {
+        id: "alchemist-chi",
+        name: "Alchemist Chicago",
+        location: "Chicago, IL (+ SF immersions)",
+        timing: "soon",
+        timingLabel: "Deadline Aug 20, 2026",
+        applyBy: "Aug 20, 2026 (opens Jul 13)",
+        sortKey: 48,
+        stage: "pre-seed",
+        focus: ["ai", "enterprise"],
+        intl: ["global"],
+        deal: "Deep-tech training + capital path",
+        duration: "Bootcamp Oct 2026 + program",
+        equity: "Alchemist terms",
+        morocco: true,
+        url: "https://www.alchemistaccelerator.com/alchemist-chicago",
+        blurb: "Deep-tech accelerator with UChicago Polsky; global founders welcome with visas.",
+        details: "In-person Chicago bootcamp Oct 19–23, 2026. Quantum track via Duality. English fluency + visa required."
+      },
+      {
+        id: "speedrun",
+        name: "a16z Speedrun",
+        location: "San Francisco, CA",
+        timing: "seasonal",
+        timingLabel: "2 cohorts / year",
+        applyBy: "speedrun.a16z.com",
+        sortKey: 33,
+        stage: "pre-seed",
+        focus: ["ai", "general"],
+        intl: ["morocco", "global"],
+        deal: "$500K for 10% + $500K follow-on option; $5M+ credits",
+        duration: "12 weeks",
+        equity: "10% SAFE",
+        morocco: true,
+        url: "https://speedrun.a16z.com/",
+        blurb: "Includes Global Founders Program for banking, relocation, and visa support.",
+        details: "AI, developer tools, infra, gaming, consumer, B2B. In-person SF required. Explicit help for non-US founders."
+      },
+      {
+        id: "pearx",
+        name: "PearX (Pear VC)",
+        location: "San Francisco Bay Area, CA",
+        timing: "open",
+        timingLabel: "W27 applications open",
+        applyBy: "Early deadline Aug 16 (verify year)",
+        sortKey: 12,
+        stage: "pre-seed",
+        focus: ["ai", "general"],
+        intl: ["global"],
+        deal: "$250K–$2M + $1M+ credits",
+        duration: "12 weeks",
+        equity: "Negotiated",
+        morocco: true,
+        url: "https://pear.vc/pearx/",
+        blurb: "Small-batch pre-seed accelerator; relocate to Bay Area. International founders eligible.",
+        details: "Hiring help, GTM, Camp Pear retreat, Demo Day. Solo founders welcome. Plan US relocation/visa."
+      },
+      {
+        id: "skydeck",
+        name: "Berkeley SkyDeck",
+        location: "Berkeley / Bay Area, CA",
+        timing: "seasonal",
+        timingLabel: "Cohort cycles",
+        applyBy: "skydeck.berkeley.edu",
+        sortKey: 36,
+        stage: "seed",
+        focus: ["general", "ai"],
+        intl: ["morocco", "global"],
+        deal: "Investment + Global Founders Program support",
+        duration: "~6 months typical",
+        equity: "SkyDeck Fund terms",
+        morocco: true,
+        url: "https://skydeck.berkeley.edu/",
+        blurb: "UC Berkeley accelerator with Global Founders Program for non-US teams entering SV.",
+        details: "Incorporation, visa pathway guidance, Bay Area landing logistics. Meaningful share of alumni from outside US."
+      },
+      {
+        id: "spc",
+        name: "South Park Commons Fellowship",
+        location: "San Francisco / NYC (US hubs)",
+        timing: "seasonal",
+        timingLabel: "Spring / Fall cycles",
+        applyBy: "southparkcommons.com",
+        sortKey: 37,
+        stage: "pre-idea",
+        focus: ["ai", "general"],
+        intl: ["global"],
+        deal: "$400K for 7% + $600K follow-on",
+        duration: "2-month bootcamp + residency",
+        equity: "7%",
+        morocco: false,
+        url: "https://www.southparkcommons.com/",
+        blurb: "Pre-idea community for technologists; must be able to be in SF or NYC.",
+        details: "Does not sponsor visas — founders must already have work authorization. Still open application; Morocco founders with visa path can apply."
+      },
+      {
+        id: "neo",
+        name: "Neo Residency",
+        location: "San Francisco, CA",
+        timing: "rolling",
+        timingLabel: "Selective / rolling",
+        applyBy: "Rolling via neo.com",
+        sortKey: 18,
+        stage: "pre-seed",
+        focus: ["ai", "general"],
+        intl: ["global"],
+        deal: "$750K uncapped SAFE + compute credits",
+        duration: "3 months + Oregon bootcamp",
+        equity: "Uncapped SAFE + ~5% participation",
+        morocco: false,
+        url: "https://neo.com/",
+        blurb: "Technical founders; SF residency. International if you can relocate legally.",
+        details: "Student track grants available. Dense technical peer group. Visa not sponsored by default."
+      },
+      {
+        id: "hf0",
+        name: "HF0 (Hacker Fellowship Zero)",
+        location: "San Francisco, CA",
+        timing: "rolling",
+        timingLabel: "Rolling residencies",
+        applyBy: "Rolling",
+        sortKey: 16,
+        stage: "pre-seed",
+        focus: ["ai", "general"],
+        intl: ["global"],
+        deal: "Reported ~$1M / 5% + living costs",
+        duration: "12 weeks live-in",
+        equity: "~5% uncapped SAFE (reported)",
+        morocco: false,
+        url: "https://hf0.com/",
+        blurb: "Intense live-in builder residency; exceptional technical track record preferred.",
+        details: "Housing/meals covered. Light curriculum, high density. International builders who can enter the US welcome."
+      },
+      {
+        id: "masschallenge",
+        name: "MassChallenge Boston",
+        location: "Boston, MA",
+        timing: "seasonal",
+        timingLabel: "Annual cycles",
+        applyBy: "masschallenge.org",
+        sortKey: 44,
+        stage: "seed",
+        focus: ["climate", "bio", "general"],
+        intl: ["morocco", "global"],
+        deal: "Zero equity; prizes up to ~$100K",
+        duration: "~4 months",
+        equity: "0%",
+        morocco: true,
+        url: "https://masschallenge.org/",
+        blurb: "Zero-equity accelerator with strong international participation.",
+        details: "Health, fintech, impact, climate tracks common. Great dilution-friendly option for Moroccan founders."
+      },
+      {
+        id: "plugplay",
+        name: "Plug and Play Tech Center",
+        location: "Sunnyvale, CA (+ verticals)",
+        timing: "rolling",
+        timingLabel: "Ongoing batch recruiting",
+        applyBy: "Rolling by vertical",
+        sortKey: 17,
+        stage: "seed",
+        focus: ["general", "ai", "enterprise"],
+        intl: ["morocco", "global"],
+        deal: "Often $0–50K; many 0% equity tracks",
+        duration: "3–6 months typical",
+        equity: "Often 0%",
+        morocco: true,
+        url: "https://www.plugandplaytechcenter.com/",
+        blurb: "Corporate innovation platform; startups worldwide apply to vertical programs.",
+        details: "Fintech, mobility, retail, health, insurance, etc. Soft-landing & corporate pilot opportunities."
+      },
+      {
+        id: "indiebio",
+        name: "IndieBio (SOSV)",
+        location: "San Francisco & New York",
+        timing: "seasonal",
+        timingLabel: "Bio batches",
+        applyBy: "indiebio.co",
+        sortKey: 39,
+        stage: "pre-seed",
+        focus: ["bio"],
+        intl: ["global"],
+        deal: "~$250K investment",
+        duration: "4 months",
+        equity: "SOSV terms (~4–7%)",
+        morocco: true,
+        url: "https://indiebio.co/",
+        blurb: "Synthetic biology accelerator; international scientific founders common.",
+        details: "Lab space + capital. Relocate for program. Strong for deep science teams from anywhere."
+      },
+      {
+        id: "hax",
+        name: "HAX (SOSV)",
+        location: "Newark, NJ (US) / hardware network",
+        timing: "seasonal",
+        timingLabel: "Hardware cohorts",
+        applyBy: "hax.co",
+        sortKey: 43,
+        stage: "pre-seed",
+        focus: ["ai", "general"],
+        intl: ["global"],
+        deal: "Investment + hardware studio",
+        duration: "~6 months",
+        equity: "SOSV terms",
+        morocco: true,
+        url: "https://hax.co/",
+        blurb: "Hardware / robotics accelerator with US presence; global founders.",
+        details: "Prototype → product manufacturing mentorship. Good for Moroccan hardware/IoT teams entering US."
+      },
+      {
+        id: "era",
+        name: "Entrepreneurs Roundtable Accelerator",
+        location: "New York, NY",
+        timing: "seasonal",
+        timingLabel: "NYC batches",
+        applyBy: "eranyc.com",
+        sortKey: 40,
+        stage: "pre-seed",
+        focus: ["general"],
+        intl: ["global"],
+        deal: "$150K for 6%",
+        duration: "4 months",
+        equity: "6%",
+        morocco: true,
+        url: "https://www.eranyc.com/",
+        blurb: "Sector-agnostic NYC accelerator; international founders regularly join.",
+        details: "Mentor-heavy, Demo Day with NYC investors. Plan NYC relocation."
+      },
+      {
+        id: "mucker",
+        name: "Mucker Capital / MuckerLab",
+        location: "Los Angeles, CA",
+        timing: "rolling",
+        timingLabel: "Ongoing",
+        applyBy: "mucker.com",
+        sortKey: 20,
+        stage: "pre-seed",
+        focus: ["general"],
+        intl: ["global"],
+        deal: "Seed investment + hands-on help",
+        duration: "Ongoing partnership",
+        equity: "Negotiated seed",
+        morocco: false,
+        url: "https://www.mucker.com/",
+        blurb: "LA pre-seed firm with accelerator-style support; open applications.",
+        details: "Strong ops support. International teams that can operate in LA considered."
+      },
+      {
+        id: "boost",
+        name: "Boost VC",
+        location: "San Mateo, CA",
+        timing: "rolling",
+        timingLabel: "Thesis-driven",
+        applyBy: "boost.vc",
+        sortKey: 22,
+        stage: "pre-seed",
+        focus: ["ai", "bio"],
+        intl: ["global"],
+        deal: "Up to ~$500K typical",
+        duration: "Program + ongoing",
+        equity: "~7.5% typical (verify)",
+        morocco: false,
+        url: "https://www.boost.vc/",
+        blurb: "Crypto, biotech, space — frontier tech; international builders apply.",
+        details: "Deep thesis investing. Good for bold science/tech from emerging markets."
+      },
+      {
+        id: "fi",
+        name: "Founder Institute",
+        location: "200+ chapters (strong US network)",
+        timing: "rolling",
+        timingLabel: "Chapter cohorts monthly",
+        applyBy: "fi.co",
+        sortKey: 14,
+        stage: "pre-idea",
+        focus: ["general"],
+        intl: ["morocco", "global"],
+        deal: "Curriculum; ~3.5% warrant typical",
+        duration: "4 months part-time",
+        equity: "~3.5% warrant",
+        morocco: true,
+        url: "https://fi.co/",
+        blurb: "Global pre-seed school with many US chapters; Morocco founders can join remote/local tracks then soft-land.",
+        details: "Idea-stage friendly. US chapters useful before relocating. Low barrier for African founders."
+      },
+      {
+        id: "gener8tor",
+        name: "gener8tor",
+        location: "Midwest US (multi-city)",
+        timing: "seasonal",
+        timingLabel: "City programs",
+        applyBy: "gener8tor.com",
+        sortKey: 45,
+        stage: "pre-seed",
+        focus: ["general", "climate"],
+        intl: ["global"],
+        deal: "~$100K for 6–9%",
+        duration: "12 weeks",
+        equity: "6–9%",
+        morocco: true,
+        url: "https://www.gener8tor.com/",
+        blurb: "Midwest accelerators; open to companies that will engage locally.",
+        details: "B2B, health, agtech common. Lower cost of living vs SV while still USA-based."
+      },
+      {
+        id: "thiel",
+        name: "Thiel Fellowship",
+        location: "USA (flexible)",
+        timing: "rolling",
+        timingLabel: "Annual / rolling review",
+        applyBy: "thielfellowship.org",
+        sortKey: 19,
+        stage: "pre-idea",
+        focus: ["general", "ai"],
+        intl: ["morocco", "global"],
+        deal: "$200K grant over 2 years; 0% equity",
+        duration: "2 years",
+        equity: "0%",
+        morocco: true,
+        url: "https://thielfellowship.org/",
+        blurb: "For builders under ~23 who skip/leave college — open internationally.",
+        details: "Grant, not accelerator. Alumni include major tech founders. Morocco youth eligible if age criteria met."
+      },
+      {
+        id: "startx",
+        name: "StartX",
+        location: "Stanford / Palo Alto, CA",
+        timing: "seasonal",
+        timingLabel: "Stanford-affiliated cycles",
+        applyBy: "startx.com",
+        sortKey: 46,
+        stage: "seed",
+        focus: ["general", "ai", "bio"],
+        intl: ["global"],
+        deal: "Equity-free mentorship (historic model)",
+        duration: "Ongoing community",
+        equity: "Often 0% program",
+        morocco: false,
+        url: "https://startx.com/",
+        blurb: "Stanford-affiliated; international Stanford community founders apply.",
+        details: "Affiliation rules apply. Strong deep-tech and health. Check current eligibility for non-Stanford."
+      },
+      {
+        id: "elemental",
+        name: "Elemental Excelerator",
+        location: "Honolulu, HI & San Francisco, CA",
+        timing: "seasonal",
+        timingLabel: "Climate cohorts",
+        applyBy: "elementalexcelerator.com",
+        sortKey: 47,
+        stage: "growth",
+        focus: ["climate"],
+        intl: ["global"],
+        deal: "Up to ~$1M grant-style funding",
+        duration: "~18 months",
+        equity: "Often grant / flexible",
+        morocco: true,
+        url: "https://elementalexcelerator.com/",
+        blurb: "Climate solutions; international climate startups soft-landing in US markets.",
+        details: "Clean energy, sustainable infrastructure. Strong for African climate innovators expanding to US."
+      },
+      {
+        id: "cleantech",
+        name: "Cleantech Open",
+        location: "USA regional (incl. Northeast, West)",
+        timing: "seasonal",
+        timingLabel: "Annual competition",
+        applyBy: "cleantechopen.org",
+        sortKey: 49,
+        stage: "seed",
+        focus: ["climate"],
+        intl: ["global"],
+        deal: "Prizes, mentors, customer intros",
+        duration: "Competition season",
+        equity: "0%",
+        morocco: true,
+        url: "https://www.cleantechopen.org/",
+        blurb: "Zero-equity cleantech accelerator/competition with US regions.",
+        details: "Good entry for climate founders from Morocco testing US traction."
+      },
+      {
+        id: "village",
+        name: "Village Capital",
+        location: "USA programs + global themes",
+        timing: "seasonal",
+        timingLabel: "Themed programs",
+        applyBy: "vilcap.com",
+        sortKey: 51,
+        stage: "seed",
+        focus: ["climate", "general"],
+        intl: ["morocco", "global"],
+        deal: "Peer-selected investment programs",
+        duration: "Program-specific",
+        equity: "Varies",
+        morocco: true,
+        url: "https://vilcap.com/",
+        blurb: "Impact-oriented; frequently includes emerging-market founders in US-linked programs.",
+        details: "Fintech, climate, health themes. Watch for US-based cohorts open to Africa."
+      },
+      {
+        id: "google",
+        name: "Google for Startups Accelerator",
+        location: "USA + global (US campus access)",
+        timing: "seasonal",
+        timingLabel: "Vertical cohorts",
+        applyBy: "startup.google.com",
+        sortKey: 34,
+        stage: "seed",
+        focus: ["ai", "general"],
+        intl: ["morocco", "global"],
+        deal: "Equity-free mentorship + Google Cloud",
+        duration: "~3 months",
+        equity: "0%",
+        morocco: true,
+        url: "https://startup.google.com/accelerator/",
+        blurb: "Equity-free; regional and AI accelerators; many open to non-US startups.",
+        details: "Check US Black Founders / AI / Women Founders eligibility. Cloud credits valuable for Moroccan SaaS."
+      },
+      {
+        id: "msft",
+        name: "Microsoft for Startups",
+        location: "USA (Founders Hub global)",
+        timing: "rolling",
+        timingLabel: "Always open",
+        applyBy: "Rolling",
+        sortKey: 10,
+        stage: "pre-seed",
+        focus: ["ai", "enterprise"],
+        intl: ["morocco", "global"],
+        deal: "Azure credits + go-to-market",
+        duration: "Ongoing",
+        equity: "0%",
+        morocco: true,
+        url: "https://www.microsoft.com/startups",
+        blurb: "Global Founders Hub — Morocco startups can join and later engage US GTM.",
+        details: "Not a classic residency but critical US-cloud soft-landing stack. Free credits tier."
+      },
+      {
+        id: "aws",
+        name: "AWS Startups / Activate",
+        location: "USA cloud + Activate providers",
+        timing: "rolling",
+        timingLabel: "Always open",
+        applyBy: "Rolling",
+        sortKey: 11,
+        stage: "pre-seed",
+        focus: ["ai", "general"],
+        intl: ["morocco", "global"],
+        deal: "AWS credits via Activate providers",
+        duration: "Ongoing",
+        equity: "0%",
+        morocco: true,
+        url: "https://aws.amazon.com/startups/",
+        blurb: "Pair with any US accelerator for infra credits; open worldwide.",
+        details: "Often bundled with YC/Techstars/500. Apply via Activate portfolio providers."
+      },
+      {
+        id: "dreamit",
+        name: "Dreamit Ventures",
+        location: "Philadelphia / NYC area",
+        timing: "seasonal",
+        timingLabel: "Healthtech / Urbantech",
+        applyBy: "dreamit.com",
+        sortKey: 52,
+        stage: "seed",
+        focus: ["bio", "general"],
+        intl: ["global"],
+        deal: "Investment + customer access",
+        duration: "~4 months",
+        equity: "Dreamit terms",
+        morocco: true,
+        url: "https://www.dreamit.com/",
+        blurb: "Healthtech and urbantech focus; international applicants considered.",
+        details: "Corporate customer intros. Useful US East Coast soft-landing."
+      },
+      {
+        id: "techstars-anywhere",
+        name: "Techstars Anywhere",
+        location: "Remote-first (USA network)",
+        timing: "seasonal",
+        timingLabel: "Remote cohort deadlines",
+        applyBy: "techstars.com",
+        sortKey: 31,
+        stage: "pre-seed",
+        focus: ["general"],
+        intl: ["morocco", "global"],
+        deal: "Same ~$220K Techstars deal",
+        duration: "3 months remote",
+        equity: "~5% + SAFE",
+        morocco: true,
+        url: "https://www.techstars.com/accelerators",
+        blurb: "Best Techstars path if you cannot yet relocate full-time from Morocco.",
+        details: "Still get network + capital. May include short US immersions — verify cohort."
+      },
+      {
+        id: "njbase",
+        name: "NJ BASE (soft landing)",
+        location: "New Jersey, USA",
+        timing: "seasonal",
+        timingLabel: "State soft-landing cycles",
+        applyBy: "Check NJEDA / BASE listings",
+        sortKey: 53,
+        stage: "growth",
+        focus: ["general", "bio"],
+        intl: ["morocco", "global"],
+        deal: "Soft-landing support in NJ",
+        duration: "Program-specific",
+        equity: "Often low / grant-like",
+        morocco: true,
+        url: "https://www.njeda.gov/",
+        blurb: "New Jersey international soft-landing style programs for foreign startups.",
+        details: "Life sciences corridor near NYC. Verify current BASE cohort status on NJEDA."
+      },
+      {
+        id: "worldupstart",
+        name: "WorldUpstart",
+        location: "USA life-sciences soft landing",
+        timing: "seasonal",
+        timingLabel: "Life science cohorts",
+        applyBy: "worldupstart.com",
+        sortKey: 54,
+        stage: "growth",
+        focus: ["bio"],
+        intl: ["global"],
+        deal: "US market entry for life sciences",
+        duration: "Multi-month",
+        equity: "Verify",
+        morocco: true,
+        url: "https://worldupstart.com/",
+        blurb: "Soft-landing for international life-science companies into the US.",
+        details: "Regulatory, reimbursement, partner intros. Fit for Moroccan medtech/biotech."
+      },
+      {
+        id: "angelpad",
+        name: "AngelPad",
+        location: "San Francisco / NYC",
+        timing: "seasonal",
+        timingLabel: "Invite / selective",
+        applyBy: "angelpad.com",
+        sortKey: 56,
+        stage: "seed",
+        focus: ["general"],
+        intl: ["global"],
+        deal: "Seed investment (historic ~$120K)",
+        duration: "3 months",
+        equity: "AngelPad terms",
+        morocco: false,
+        url: "https://angelpad.com/",
+        blurb: "Highly selective; small batches; international teams occasionally.",
+        details: "Product-focused mentorship. Hard to get in; worth applying if product is strong."
+      },
+      {
+        id: "techstars-nyc",
+        name: "Techstars New York",
+        location: "New York, NY",
+        timing: "seasonal",
+        timingLabel: "NYC deadlines",
+        applyBy: "Per Techstars NYC page",
+        sortKey: 32.1,
+        stage: "pre-seed",
+        focus: ["general", "enterprise"],
+        intl: ["global"],
+        deal: "Standard Techstars ~$220K",
+        duration: "3 months",
+        equity: "Standard Techstars",
+        morocco: true,
+        url: "https://www.techstars.com/accelerators",
+        blurb: "Flagship East Coast Techstars; international founders common.",
+        details: "Fintech, enterprise, media density. Relocate to NYC for cohort."
+      },
+      {
+        id: "techstars-seattle",
+        name: "Techstars Seattle",
+        location: "Seattle, WA",
+        timing: "seasonal",
+        timingLabel: "Seattle deadlines",
+        applyBy: "Techstars Seattle page",
+        sortKey: 32.2,
+        stage: "pre-seed",
+        focus: ["ai", "enterprise"],
+        intl: ["global"],
+        deal: "Standard Techstars ~$220K",
+        duration: "3 months",
+        equity: "Standard Techstars",
+        morocco: true,
+        url: "https://www.techstars.com/accelerators",
+        blurb: "Pacific Northwest tech ecosystem; open internationally.",
+        details: "Cloud, AI, enterprise proximity to Big Tech. Visa planning required."
+      },
+      {
+        id: "techstars-la",
+        name: "Techstars Los Angeles",
+        location: "Los Angeles, CA",
+        timing: "seasonal",
+        timingLabel: "LA deadlines",
+        applyBy: "Techstars LA page",
+        sortKey: 32.3,
+        stage: "pre-seed",
+        focus: ["general"],
+        intl: ["global"],
+        deal: "Standard Techstars ~$220K",
+        duration: "3 months",
+        equity: "Standard Techstars",
+        morocco: true,
+        url: "https://www.techstars.com/accelerators",
+        blurb: "LA media/consumer/tech mix; global applicants welcome.",
+        details: "Good for consumer, entertainment tech, climate in SoCal."
+      },
+      {
+        id: "techstars-boston",
+        name: "Techstars Boston",
+        location: "Boston, MA",
+        timing: "seasonal",
+        timingLabel: "Boston deadlines",
+        applyBy: "Techstars Boston page",
+        sortKey: 32.4,
+        stage: "pre-seed",
+        focus: ["bio", "ai"],
+        intl: ["global"],
+        deal: "Standard Techstars ~$220K",
+        duration: "3 months",
+        equity: "Standard Techstars",
+        morocco: true,
+        url: "https://www.techstars.com/accelerators",
+        blurb: "Deep talent from universities; biotech & AI heavy.",
+        details: "Strong for technical Moroccan founders in health/AI."
+      },
+      {
+        id: "alpha",
+        name: "AlphaLab / AlphaLab Gear",
+        location: "Pittsburgh, PA",
+        timing: "seasonal",
+        timingLabel: "Innovation Works cycles",
+        applyBy: "alphalab.org",
+        sortKey: 57,
+        stage: "pre-seed",
+        focus: ["general", "ai"],
+        intl: ["global"],
+        deal: "~$25–100K range programs",
+        duration: "~20 weeks",
+        equity: "Low single-digit %",
+        morocco: true,
+        url: "https://alphalab.org/",
+        blurb: "Software (AlphaLab) and hardware (Gear); open to relocating founders.",
+        details: "Lower cost US city. Hardware track valuable for makers from abroad."
+      },
+      {
+        id: "bluestartups",
+        name: "Blue Startups",
+        location: "Honolulu, HI",
+        timing: "seasonal",
+        timingLabel: "Pacific cohorts",
+        applyBy: "bluestartups.com",
+        sortKey: 58,
+        stage: "seed",
+        focus: ["general"],
+        intl: ["global"],
+        deal: "~$25K+ for equity (verify)",
+        duration: "3 months",
+        equity: "~8% typical (verify)",
+        morocco: true,
+        url: "https://www.bluestartups.com/",
+        blurb: "Hawaii accelerator bridging Asia-Pacific and US mainland — global founders.",
+        details: "Interesting soft-landing if targeting APAC + US. Still USA-based program."
+      },
+      {
+        id: "rightside",
+        name: "Right Side Capital / Batchery",
+        location: "Berkeley / Bay Area, CA",
+        timing: "rolling",
+        timingLabel: "Rolling seed",
+        applyBy: "rightsidecapital.com",
+        sortKey: 21,
+        stage: "pre-seed",
+        focus: ["general"],
+        intl: ["global"],
+        deal: "Small seed checks + Batchery community",
+        duration: "Ongoing",
+        equity: "Seed terms",
+        morocco: false,
+        url: "https://rightsidecapital.com/",
+        blurb: "High-volume pre-seed; international SaaS teams sometimes funded.",
+        details: "Data-driven seed. Pair with SF residency programs."
+      },
+      {
+        id: "thirdderiv",
+        name: "Third Derivative (3D)",
+        location: "USA climate network (RMI)",
+        timing: "seasonal",
+        timingLabel: "Climate cohorts",
+        applyBy: "third-derivative.org",
+        sortKey: 59,
+        stage: "seed",
+        focus: ["climate"],
+        intl: ["morocco", "global"],
+        deal: "Corporate pilot access + capital intros",
+        duration: "Program cycles",
+        equity: "Varies",
+        morocco: true,
+        url: "https://www.third-derivative.org/",
+        blurb: "Climate tech; international startups engaging US corporates.",
+        details: "Strong for energy transition founders from Africa entering US offtakers."
+      },
+      {
+        id: "morgan",
+        name: "Morgan Stanley Inclusive Ventures Lab",
+        location: "New York, NY (USA)",
+        timing: "seasonal",
+        timingLabel: "Annual lab",
+        applyBy: "morganstanley.com (Inclusive Ventures)",
+        sortKey: 60,
+        stage: "seed",
+        focus: ["general"],
+        intl: ["global"],
+        deal: "Investment + MS platform",
+        duration: "~6 months",
+        equity: "MS investment terms",
+        morocco: false,
+        url: "https://www.morganstanley.com/",
+        blurb: "Diverse founder focus; US-based lab with selective international participation.",
+        details: "Fintech and enterprise common. Check current diversity & geo criteria."
+      },
+      {
+        id: "ai2",
+        name: "AI2 Incubator",
+        location: "Seattle, WA",
+        timing: "rolling",
+        timingLabel: "Ongoing",
+        applyBy: "ai2incubator.com",
+        sortKey: 23,
+        stage: "pre-seed",
+        focus: ["ai"],
+        intl: ["global"],
+        deal: "Funding + Allen Institute AI talent",
+        duration: "Incubation ongoing",
+        equity: "Negotiated",
+        morocco: true,
+        url: "https://ai2incubator.com/",
+        blurb: "AI-first incubator; deep research founders from anywhere considered.",
+        details: "NLP, computer vision, scientific AI. Relocate to Seattle."
+      },
+      {
+        id: "antler-us",
+        name: "Antler (US / Embark path)",
+        location: "USA hubs + immigrant founder support",
+        timing: "seasonal",
+        timingLabel: "Residency cohorts",
+        applyBy: "antler.co",
+        sortKey: 41.5,
+        stage: "pre-idea",
+        focus: ["general"],
+        intl: ["morocco", "global"],
+        deal: "Pre-seed (Embark path up to large checks reported)",
+        duration: "Residency months",
+        equity: "Antler founding terms",
+        morocco: true,
+        url: "https://www.antler.co/",
+        blurb: "Day-zero investor; Embark supports immigrant founders targeting the US.",
+        details: "Apply as talent. Morocco founders can form company then pursue US path via Antler network."
+      },
+      {
+        id: "on-deck",
+        name: "On Deck (ODF / fellowships)",
+        location: "USA community (SF intensity)",
+        timing: "rolling",
+        timingLabel: "Rolling fellowships",
+        applyBy: "beondeck.com",
+        sortKey: 24,
+        stage: "pre-idea",
+        focus: ["general", "ai"],
+        intl: ["global"],
+        deal: "Community + programs (paid/fellowship mix)",
+        duration: "Cohort-based",
+        equity: "Usually 0%",
+        morocco: true,
+        url: "https://www.beondeck.com/",
+        blurb: "Founder community with US density; international members common.",
+        details: "Not a classic $for-% accelerator; network useful before Bridge/YC."
+      },
+      {
+        id: "cdl",
+        name: "Creative Destruction Lab (US sites)",
+        location: "US partner sites / remote mentors",
+        timing: "seasonal",
+        timingLabel: "Stream deadlines",
+        applyBy: "creativedestructionlab.com",
+        sortKey: 61,
+        stage: "seed",
+        focus: ["ai", "bio"],
+        intl: ["global"],
+        deal: "Mentorship; optional investment partners",
+        duration: "9 months objectives-based",
+        equity: "0% to CDL core",
+        morocco: true,
+        url: "https://creativedestructionlab.com/",
+        blurb: "Science/tech mentoring; some US-linked streams accept global ventures.",
+        details: "Objectives with mentors. Verify which streams allow Morocco-based primary ops."
+      },
+      {
+        id: "mit-deltav",
+        name: "MIT delta v",
+        location: "Cambridge, MA",
+        timing: "seasonal",
+        timingLabel: "Summer accelerator",
+        applyBy: "entrepreneurship.mit.edu",
+        sortKey: 62,
+        stage: "pre-seed",
+        focus: ["general", "ai"],
+        intl: ["global"],
+        deal: "Stipend + MIT ecosystem",
+        duration: "Summer",
+        equity: "Typically 0%",
+        morocco: false,
+        url: "https://entrepreneurship.mit.edu/accelerator/",
+        blurb: "MIT-affiliated; international MIT students/alumni path strongest.",
+        details: "Affiliation rules matter. Still a top USA program if you qualify."
+      },
+      {
+        id: "techstars-food",
+        name: "Techstars Future of Food",
+        location: "USA (Ecolab partnership)",
+        timing: "seasonal",
+        timingLabel: "Vertical deadline",
+        applyBy: "Techstars Future of Food page",
+        sortKey: 32.5,
+        stage: "seed",
+        focus: ["climate", "general"],
+        intl: ["morocco", "global"],
+        deal: "Standard Techstars deal",
+        duration: "3 months",
+        equity: "Standard Techstars",
+        morocco: true,
+        url: "https://www.techstars.com/accelerators",
+        blurb: "Food / ag innovation — strong thematic fit for North African agtech.",
+        details: "Corporate partner Ecolab. International foodtech welcome."
+      },
+      {
+        id: "techstars-health",
+        name: "Techstars Healthcare",
+        location: "USA (Permanente Medicine partnership)",
+        timing: "seasonal",
+        timingLabel: "Healthcare deadline",
+        applyBy: "Techstars Healthcare page",
+        sortKey: 32.6,
+        stage: "seed",
+        focus: ["bio"],
+        intl: ["global"],
+        deal: "Standard Techstars deal",
+        duration: "3 months",
+        equity: "Standard Techstars",
+        morocco: true,
+        url: "https://www.techstars.com/accelerators",
+        blurb: "Digital health with US health-system partner access.",
+        details: "Useful for Moroccan health startups seeking US clinical pathways."
+      },
+      {
+        id: "batchery",
+        name: "The Batchery",
+        location: "Berkeley, CA",
+        timing: "rolling",
+        timingLabel: "Community + programs",
+        applyBy: "batchery.com",
+        sortKey: 26,
+        stage: "pre-seed",
+        focus: ["general"],
+        intl: ["global"],
+        deal: "Workspace + investor access",
+        duration: "Flexible",
+        equity: "Varies",
+        morocco: false,
+        url: "https://www.thebatchery.com/",
+        blurb: "Bay Area founder community; international soft-landing vibe.",
+        details: "Complement to capital programs. Networking density in Berkeley."
+      },
+      {
+        id: "amplify",
+        name: "Amplify.LA",
+        location: "Los Angeles, CA",
+        timing: "rolling",
+        timingLabel: "Selective rolling",
+        applyBy: "amplify.la",
+        sortKey: 27,
+        stage: "pre-seed",
+        focus: ["general"],
+        intl: ["global"],
+        deal: "Seed + mentorship",
+        duration: "Accelerator-style",
+        equity: "Seed terms",
+        morocco: false,
+        url: "https://amplify.la/",
+        blurb: "LA seed accelerator; open applications historically.",
+        details: "Consumer and tech. Relocate to LA."
+      },
+      {
+        id: "betaworks",
+        name: "betaworks camps",
+        location: "New York, NY",
+        timing: "seasonal",
+        timingLabel: "Themed camps",
+        applyBy: "betaworks.com",
+        sortKey: 63,
+        stage: "pre-seed",
+        focus: ["ai", "general"],
+        intl: ["global"],
+        deal: "Investment into camp companies",
+        duration: "Camp cohort",
+        equity: "betaworks terms",
+        morocco: true,
+        url: "https://betaworks.com/",
+        blurb: "Themed NYC camps (AI, etc.); international builders apply when themes open.",
+        details: "Watch camp announcements. High product bar."
+      },
+      {
+        id: "forum-vc",
+        name: "Forum Ventures Accelerator",
+        location: "USA (NYC / SF remote mix)",
+        timing: "seasonal",
+        timingLabel: "B2B SaaS cohorts",
+        applyBy: "forumvc.com",
+        sortKey: 64,
+        stage: "pre-seed",
+        focus: ["enterprise"],
+        intl: ["global"],
+        deal: "Investment + B2B GTM",
+        duration: "~4 months",
+        equity: "Forum terms",
+        morocco: true,
+        url: "https://www.forumvc.com/",
+        blurb: "B2B SaaS accelerator; international SaaS founders targeting US buyers.",
+        details: "Customer development focus. Good Morocco → US B2B path."
+      },
+      {
+        id: "techstars-boulder",
+        name: "Techstars Boulder",
+        location: "Boulder, CO",
+        timing: "seasonal",
+        timingLabel: "Boulder deadlines",
+        applyBy: "Techstars Boulder page",
+        sortKey: 32.7,
+        stage: "pre-seed",
+        focus: ["general"],
+        intl: ["global"],
+        deal: "Standard Techstars ~$220K",
+        duration: "3 months",
+        equity: "Standard Techstars",
+        morocco: true,
+        url: "https://www.techstars.com/accelerators",
+        blurb: "Original Techstars city; mentor culture; international founders welcome.",
+        details: "Lifestyle + startup density. Easier living costs than SF."
+      },
+      {
+        id: "sosv",
+        name: "SOSV General / Climate",
+        location: "Princeton network + US programs",
+        timing: "seasonal",
+        timingLabel: "Vertical deadlines",
+        applyBy: "sosv.com",
+        sortKey: 42.5,
+        stage: "pre-seed",
+        focus: ["climate", "bio", "ai"],
+        intl: ["morocco", "global"],
+        deal: "~$150K typical family check",
+        duration: "Program-specific",
+        equity: "4–7% range typical",
+        morocco: true,
+        url: "https://sosv.com/",
+        blurb: "Deep-tech VC firm running US accelerators (IndieBio, HAX, etc.).",
+        details: "Apply via vertical. Strong science founders from Africa."
+      },
+      {
+        id: "techstars-austin",
+        name: "Techstars Austin",
+        location: "Austin, TX",
+        timing: "seasonal",
+        timingLabel: "Austin deadlines",
+        applyBy: "Techstars Austin page",
+        sortKey: 32.8,
+        stage: "pre-seed",
+        focus: ["general"],
+        intl: ["global"],
+        deal: "Standard Techstars ~$220K",
+        duration: "3 months",
+        equity: "Standard Techstars",
+        morocco: true,
+        url: "https://www.techstars.com/accelerators",
+        blurb: "Texas growth hub; pairs well with International Accelerator Austin.",
+        details: "No state income tax lifestyle. Hot for enterprise and climate."
+      },
+      {
+        id: "gsv",
+        name: "GSV AI / EDU accelerators",
+        location: "USA (Silicon Valley linked)",
+        timing: "seasonal",
+        timingLabel: "Summit-linked",
+        applyBy: "gsv.art / ASU+GSV",
+        sortKey: 65,
+        stage: "seed",
+        focus: ["ai", "general"],
+        intl: ["global"],
+        deal: "Visibility + investor exposure",
+        duration: "Program / summit",
+        equity: "Often 0%",
+        morocco: true,
+        url: "https://www.asugsvsummit.com/",
+        blurb: "Edtech/AI visibility programs tied to US investor summits.",
+        details: "Good for Moroccan edtech expanding to US institutions."
+      },
+      {
+        id: "techstars-chicago",
+        name: "Techstars Chicago / Midwest",
+        location: "Chicago, IL",
+        timing: "seasonal",
+        timingLabel: "Chicago deadlines",
+        applyBy: "Techstars Chicago page",
+        sortKey: 32.9,
+        stage: "pre-seed",
+        focus: ["general", "enterprise"],
+        intl: ["global"],
+        deal: "Standard Techstars ~$220K",
+        duration: "3 months",
+        equity: "Standard Techstars",
+        morocco: true,
+        url: "https://www.techstars.com/accelerators",
+        blurb: "Midwest enterprise & logistics tech; international teams accepted.",
+        details: "Combine with Alchemist Chicago for deep-tech density."
+      },
+      {
+        id: "founder-fuel-us",
+        name: "Capital Factory",
+        location: "Austin, TX",
+        timing: "rolling",
+        timingLabel: "Membership + accelerator",
+        applyBy: "capitalfactory.com",
+        sortKey: 28,
+        stage: "pre-seed",
+        focus: ["general", "ai"],
+        intl: ["global"],
+        deal: "Community + selective investment",
+        duration: "Ongoing",
+        equity: "Deal-by-deal",
+        morocco: true,
+        url: "https://www.capitalfactory.com/",
+        blurb: "Austin mega-hub for startups; international founders relocating to TX.",
+        details: "Events, mentors, demo days. Soft-landing companion to IA Austin."
+      },
+      {
+        id: "ycombinator-startup-school",
+        name: "YC Startup School",
+        location: "Online (YC / USA brand)",
+        timing: "rolling",
+        timingLabel: "Often open",
+        applyBy: "startupschool.org",
+        sortKey: 9,
+        stage: "pre-idea",
+        focus: ["general"],
+        intl: ["morocco", "global"],
+        deal: "Free education; 0% equity",
+        duration: "Self-paced / cohort",
+        equity: "0%",
+        morocco: true,
+        url: "https://www.startupschool.org/",
+        blurb: "Free YC curriculum from anywhere — ideal first step from Morocco before The Bridge/YC.",
+        details: "No relocation required. Builds application strength for paid/equity US programs."
+      },
+      {
+        id: "techstars-dc",
+        name: "Techstars Washington DC / Healthcare Mid-Atlantic",
+        location: "Washington, D.C. area",
+        timing: "seasonal",
+        timingLabel: "DC-area deadlines",
+        applyBy: "Techstars DC pages",
+        sortKey: 32.95,
+        stage: "seed",
+        focus: ["bio", "enterprise"],
+        intl: ["global"],
+        deal: "Standard Techstars ~$220K",
+        duration: "3 months",
+        equity: "Standard Techstars",
+        morocco: true,
+        url: "https://www.techstars.com/accelerators",
+        blurb: "Policy + health + govtech proximity; international founders welcome.",
+        details: "Useful if selling into US institutions / health systems."
+      }
+    ];
+
+    const TIMING_ORDER = { open: 0, rolling: 1, soon: 2, seasonal: 3, upcoming: 4, closed: 5 };
+    const TIMING_TITLE = {
+      open: "Open to apply now",
+      rolling: "Rolling applications",
+      soon: "Deadline soon — prioritize",
+      seasonal: "Seasonal / multi-batch (watch deadlines)",
+      upcoming: "Opens later — set reminders",
+      closed: "Currently closed"
+    };
+
+    let sortMode = "timing";
+
+    const $ = (sel) => document.querySelector(sel);
+    const app = $("#app");
+    const overlay = $("#overlay");
+    const modal = $("#modal");
+
+    function badgeClass(t) {
+      return ({ open: "open", rolling: "rolling", soon: "soon", seasonal: "seasonal", upcoming: "closed", closed: "closed" })[t] || "closed";
+    }
+
+    function matches(p) {
+      const q = $("#q").value.trim().toLowerCase();
+      const timing = $("#timing").value;
+      const stage = $("#stage").value;
+      const focus = $("#focus").value;
+      const intl = $("#intl").value;
+
+      if (timing !== "all" && p.timing !== timing) return false;
+      if (stage !== "all" && p.stage !== stage) return false;
+      if (focus !== "all" && !(p.focus || []).includes(focus)) return false;
+      if (intl === "morocco" && !p.morocco && !(p.intl || []).includes("morocco")) return false;
+      if (intl === "global" && !(p.intl || []).includes("global")) return false;
+
+      if (q) {
+        const hay = [p.name, p.location, p.blurb, p.details, p.deal, ...(p.focus || [])].join(" ").toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    }
+
+    function sorted(list) {
+      const arr = [...list];
+      if (sortMode === "name") arr.sort((a, b) => a.name.localeCompare(b.name));
+      else if (sortMode === "location") arr.sort((a, b) => a.location.localeCompare(b.location) || a.name.localeCompare(b.name));
+      else arr.sort((a, b) => (TIMING_ORDER[a.timing] - TIMING_ORDER[b.timing]) || (a.sortKey - b.sortKey) || a.name.localeCompare(b.name));
+      return arr;
+    }
+
+    function groupByTiming(list) {
+      const order = ["open", "rolling", "soon", "seasonal", "upcoming", "closed"];
+      const groups = {};
+      order.forEach((k) => (groups[k] = []));
+      list.forEach((p) => {
+        if (!groups[p.timing]) groups[p.timing] = [];
+        groups[p.timing].push(p);
+      });
+      return order.filter((k) => groups[k].length).map((k) => ({ key: k, title: TIMING_TITLE[k], items: groups[k] }));
+    }
+
+    function cardHTML(p) {
+      return `
+        <article class="card" tabindex="0" data-id="${p.id}" role="button" aria-label="Details for ${p.name}">
+          <div class="card-top">
+            <span class="badge ${badgeClass(p.timing)}">${p.timingLabel}</span>
+            ${p.morocco ? '<span class="tag-intl">MA / Africa / MENA fit</span>' : ""}
+          </div>
+          <h3>${p.name}</h3>
+          <p class="loc">${p.location}</p>
+          <p class="deadline">Apply: <em>${p.applyBy}</em></p>
+          <p class="blurb">${p.blurb}</p>
+          <div class="tags">
+            <span class="tag">${p.stage}</span>
+            ${(p.focus || []).slice(0, 3).map((f) => `<span class="tag">${f}</span>`).join("")}
+          </div>
+          <div class="card-foot">
+            <span>${p.duration}</span>
+            <a href="${p.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Apply ↗</a>
+          </div>
+        </article>`;
+    }
+
+    function render() {
+      const filtered = sorted(PROGRAMS.filter(matches));
+      $("#result-count").textContent = `Showing ${filtered.length} of ${PROGRAMS.length}`;
+      $("#stat-total").textContent = String(PROGRAMS.length);
+      $("#stat-open").textContent = String(PROGRAMS.filter((p) => p.timing === "open" || p.timing === "rolling").length);
+
+      if (!filtered.length) {
+        app.innerHTML = `<div class="empty"><p>No programs match these filters. Clear search or widen timing/focus.</p></div>`;
+        return;
+      }
+
+      if (sortMode !== "timing") {
+        app.innerHTML = `<section class="timeline"><div class="section-head"><h2>All matching programs</h2><span class="count">${filtered.length}</span></div><div class="grid">${filtered.map(cardHTML).join("")}</div></section>`;
+      } else {
+        const groups = groupByTiming(filtered);
+        app.innerHTML = groups.map((g) => `
+          <section class="timeline" id="sec-${g.key}">
+            <div class="section-head">
+              <h2>${g.title}</h2>
+              <span class="count">${g.items.length} program${g.items.length === 1 ? "" : "s"}</span>
+            </div>
+            <div class="grid">${g.items.map(cardHTML).join("")}</div>
+          </section>`).join("");
+      }
+
+      app.querySelectorAll(".card").forEach((el) => {
+        el.addEventListener("click", () => openModal(el.dataset.id));
+        el.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openModal(el.dataset.id);
+          }
+        });
+      });
+    }
+
+    function openModal(id) {
+      const p = PROGRAMS.find((x) => x.id === id);
+      if (!p) return;
+      modal.innerHTML = `
+        <button class="modal-close" type="button" aria-label="Close" id="close-modal">×</button>
+        <span class="badge ${badgeClass(p.timing)}">${p.timingLabel}</span>
+        ${p.morocco ? ' <span class="tag-intl">Strong Morocco / Africa / MENA fit</span>' : ""}
+        <h2 id="modal-title">${p.name}</h2>
+        <p class="loc">${p.location}</p>
+        <dl class="detail-grid">
+          <div class="detail"><dt>Apply by</dt><dd>${p.applyBy}</dd></div>
+          <div class="detail"><dt>Duration</dt><dd>${p.duration}</dd></div>
+          <div class="detail"><dt>Deal / offer</dt><dd>${p.deal}</dd></div>
+          <div class="detail"><dt>Equity</dt><dd>${p.equity}</dd></div>
+          <div class="detail"><dt>Stage</dt><dd>${p.stage}</dd></div>
+          <div class="detail"><dt>Focus</dt><dd>${(p.focus || []).join(", ")}</dd></div>
+        </dl>
+        <p>${p.details}</p>
+        <p>${p.blurb}</p>
+        <a class="cta" href="${p.url}" target="_blank" rel="noopener">Open official site →</a>
+      `;
+      overlay.classList.add("show");
+      $("#close-modal").onclick = closeModal;
+    }
+
+    function closeModal() {
+      overlay.classList.remove("show");
+    }
+
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeModal();
+    });
+
+    ["q", "timing", "stage", "focus", "intl"].forEach((id) => {
+      $(`#${id}`).addEventListener("input", render);
+      $(`#${id}`).addEventListener("change", render);
+    });
+
+    document.querySelectorAll("#sort-chips .chip").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#sort-chips .chip").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        sortMode = btn.dataset.sort;
+        render();
+      });
+    });
+
+    render();
+  </script>
+</body>
+</html>

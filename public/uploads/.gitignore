@@ -1,0 +1,9 @@
+# Keep uploads directory; ignore user-uploaded binaries except placeholders
+*
+!.gitignore
+!avatar-placeholder.svg
+!project-placeholder.svg
+!gallery-1.svg
+!gallery-2.svg
+!gallery-3.svg
+!resume.pdf

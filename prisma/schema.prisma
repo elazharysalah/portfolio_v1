@@ -1,0 +1,142 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Profile {
+  id           String   @id @default("main")
+  name         String
+  title        String
+  email        String
+  phone        String?
+  location     String?
+  bio          String   @db.Text
+  avatarUrl    String?
+  resumeUrl    String?
+  linkedinUrl  String?
+  githubUrl    String?
+  instagramUrl String?
+  facebookUrl  String?
+  twitterUrl   String?
+  websiteUrl   String?
+  footerText   String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model SiteSettings {
+  id                    String @id @default("main")
+  aboutTitle            String @default("Digital Identity")
+  highlightsTitle       String @default("Highlights & Successes")
+  featuredTitle         String @default("Case Study")
+  featuredSubtitle      String @default("Selected ventures and product stories.")
+  resumeTitle           String @default("Career Snapshot")
+  experienceTitle       String @default("Experience")
+  educationTitle        String @default("Education")
+  skillsTitle           String @default("My skills")
+  portfolioTitle        String @default("Creative Showcase")
+  contactTitle          String @default("Let's Connect")
+  contactDetailsTitle   String @default("Contact Details")
+  contactFormTitle      String @default("Contact Form")
+  galleryTitle          String @default("Pixels & Passion")
+}
+
+model Highlight {
+  id        String   @id @default(cuid())
+  value     String
+  label     String
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Experience {
+  id          String   @id @default(cuid())
+  company     String
+  role        String
+  location    String?
+  period      String
+  description String   @db.Text
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Education {
+  id          String   @id @default(cuid())
+  institution String
+  degree      String
+  period      String
+  description String?  @db.Text
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model SkillGroup {
+  id        String   @id @default(cuid())
+  name      String
+  sortOrder Int      @default(0)
+  skills    Skill[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Skill {
+  id        String     @id @default(cuid())
+  name      String
+  sortOrder Int        @default(0)
+  groupId   String
+  group     SkillGroup @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model Project {
+  id           String          @id @default(cuid())
+  title        String
+  url          String?
+  description  String          @db.Text
+  content      String?         @db.Text
+  imageUrl     String?
+  featured     Boolean         @default(false)
+  accessMode   String          @default("link")
+  sortOrder    Int             @default(0)
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+  accessRequests AccessRequest[]
+}
+
+model AccessRequest {
+  id        String   @id @default(cuid())
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  name      String
+  email     String
+  message   String?  @db.Text
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model GalleryImage {
+  id        String   @id @default(cuid())
+  imageUrl  String
+  caption   String?
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String?
+  message   String   @db.Text
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" fill="none">
+  <rect width="480" height="360" rx="20" fill="#1a1a20"/>
+  <rect x="30" y="30" width="420" height="220" rx="14" fill="#26262e"/>
+  <circle cx="120" cy="120" r="36" fill="#70c8ff" opacity="0.4"/>
+  <rect x="180" y="100" width="220" height="12" rx="6" fill="#3a3a44"/>
+  <rect x="180" y="130" width="180" height="10" rx="5" fill="#33333c"/>
+  <text x="240" y="310" text-anchor="middle" fill="#8a8a94" font-family="sans-serif" font-size="16">Gallery</text>
+</svg>
